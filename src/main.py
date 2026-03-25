@@ -18,7 +18,6 @@ GAME_TITLE = "Single Shot Arena"
 SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 600
 MAX_FPS = 60
-PLAYER_SPEED = 1
 
 # Colors 
 WHITE = (255, 255, 255)
@@ -26,6 +25,13 @@ BLACK = (0, 0, 0)
 BLUE = (0, 0, 255)
 RED = (255, 0, 0)
 GREEN = (0, 255, 0)
+
+# Game Constants
+FLOOR_Y = SCREEN_HEIGHT - 50
+PLAYER_SPEED = 1
+PLAYER_JUMP_POWER = -400
+PLAYER_GRAVITY = 1200
+
 
 # Set up the display
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
