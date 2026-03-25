@@ -45,7 +45,8 @@ class Player(pygame.sprite.Sprite):
         
         self.image = pygame.Surface((100, 200))
         self.image.fill (BLUE)
-        self.rect = self.image.get.rect()
+        self.rect = self.image.get_rect()
+        self.rect
         
         
 
