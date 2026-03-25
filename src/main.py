@@ -46,9 +46,15 @@ class Player(pygame.sprite.Sprite):
         self.image = pygame.Surface((100, 200))
         self.image.fill (BLUE)
         self.rect = self.image.get_rect()
-        self.rect
+        self.rect.topleft = (400, 300) 
+        self.velocity_x = PLAYER_SPEED
         
-        
+    def update(self):
+        # Move player horizontally
+        self.rect.x += self.velocity_x
+        # Wrap around screen
+        if self.rect.left > SCREEN_WIDTH:
+            self.rect.right = 0
 
 # Game loop
 running = True
