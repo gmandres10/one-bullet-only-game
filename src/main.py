@@ -91,6 +91,9 @@ while running:
     
     
     # Drawing
+    screen.fill(WHITE)
+    all_sprites.draw(screen)
+    
     draw_text("Welcome to Single Shot Arena!", BLUE, (10, 10))
     pygame.draw.circle(screen, (RED), (300,300), 20)
     pygame.draw.rect(screen, (GREEN), (400, 300, 100, 200))
