@@ -53,7 +53,7 @@ class Player(pygame.sprite.Sprite):
         self.image.fill (BLUE)
         self.rect = self.image.get_rect()
         self.rect.topleft = (200, 100) 
-        self.velocity_x = PLAYER_SPEED
+        
         
     def update(self):
         # Move player horizontally
