@@ -84,7 +84,7 @@ while running:
             running = False
             
     # Update game state
-    all_sprites.update(delta)
+    all_sprites.update(clock.get_time() / 1000.0)  # Pass delta time in seconds
     
     
     # Drawing
