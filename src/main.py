@@ -83,6 +83,9 @@ while running:
         if event.type == pygame.QUIT:
             running = False
             
+    # Clock update 
+    clock.tick(MAX_FPS)
+            
     # Update game state
     all_sprites.update(clock.get_time() / 1000.0)  # Pass delta time in seconds
     
