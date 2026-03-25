@@ -84,7 +84,7 @@ while running:
             running = False
             
     # Update game state
-    player.update()
+    all
     
     # Drawing
     draw_text("Welcome to Single Shot Arena!", BLUE, (10, 10))
