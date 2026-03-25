@@ -46,7 +46,7 @@ class Player(pygame.sprite.Sprite):
         self.image = pygame.Surface((100, 300))
         self.image.fill (BLUE)
         self.rect = self.image.get_rect()
-        self.rect.topleft = (400, 300) 
+        self.rect.topleft = (200, 100) 
         self.velocity_x = PLAYER_SPEED
         
     def update(self):
