@@ -84,7 +84,8 @@ while running:
             running = False
             
     # Update game state
-    all
+    all_sprites.update(delta)
+    
     
     # Drawing
     draw_text("Welcome to Single Shot Arena!", BLUE, (10, 10))
