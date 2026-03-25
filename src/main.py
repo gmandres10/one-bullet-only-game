@@ -28,9 +28,6 @@ def draw_text(txt, color, position=(10,10)):
     text_surface = FONT_INFO.render(txt, True, color)
     screen.blit(text_surface, position)
 
-
-
-
 # Game loop
 running = True
 while running:
