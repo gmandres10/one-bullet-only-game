@@ -52,7 +52,15 @@ class Player(pygame.sprite.Sprite):
         self.image = pygame.Surface((100, 200))
         self.image.fill (BLUE)
         self.rect = self.image.get_rect()
-        self.rect.topleft = (20, SCREEN_HEIGHT)
+        self.rect.topleft = (20, SCREEN_HEIGHT - 250)
+        self.speed = PLAYER_SPEED
+        
+    def update(self, delta):
+        keys = pygame.key.get_pressed()
+        if keys[pygame.K_LEFT] and self.rect.left > 0:
+            self.rect.x -= self
+        if keys[pygame.K_RIGHT] and self.rect.right < SCREEN_WIDTH:
+            self.rect.x += self.speed * delta 
         
         
     def update(self):
