@@ -36,6 +36,14 @@ FONT_INFO = pygame.font.SysFont("Arial", 24)
 def draw_text(txt, color, position=(10,10)):
     text_surface = FONT_INFO.render(txt, True, color)
     screen.blit(text_surface, position)
+    
+class Player(pygame.sprite.Sprite):
+    def __init__(self):
+        super().__init__()
+        
+        self.image = pygame.Surface((100, 200))
+        self.image.fill (BLUE)
+        
 
 # Game loop
 running = True
