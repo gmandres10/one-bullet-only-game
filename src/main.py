@@ -25,7 +25,7 @@ while running:
         if event.type == pygame.QUIT:
             running = False
     # Drawing
-    pygame.draw.circle(screen, (0, 255, 0), (400,300,100,200))
+    pygame.draw.circle(screen, (0, 255, 0), 15)
     # Update display
     pygame.display.flip()
     
