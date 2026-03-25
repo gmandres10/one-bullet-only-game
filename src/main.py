@@ -52,7 +52,7 @@ class Player(pygame.sprite.Sprite):
         self.image = pygame.Surface((100, 200))
         self.image.fill (BLUE)
         self.rect = self.image.get_rect()
-        
+        self.rect.topleft = (20, SCREEN_HEIGHT)
         
         
     def update(self):
