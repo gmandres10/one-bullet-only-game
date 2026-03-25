@@ -11,6 +11,9 @@ SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 600
 MAX_FPS = 60
 
+# Colors 
+wHITE = (255, 255, 255)
+BLACK = (0, 0, 0)
 
 
 
