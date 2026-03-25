@@ -46,7 +46,7 @@ while running:
     # Drawing
     draw_text("Welcome to Single Shot Arena!", BLUE, (10, 10))
     pygame.draw.circle(screen, (0, 255, 0), (100,100), 50)
-    pygame.draw.rect(screen, (255, ))
+    pygame.draw.rect(screen, (255, 0, 0), (200, 150, 100, 50))
     # Update display
     pygame.display.flip()
 
