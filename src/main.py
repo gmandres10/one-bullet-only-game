@@ -36,8 +36,10 @@ while running:
         if event.type == pygame.QUIT:
             running = False
     # Drawing
+    draw_text("Welcome to Single Shot Arena!", BLUE, (10, 10))
     pygame.draw.circle(screen, (0, 255, 0), (100,100), 50)
     # Update display
     pygame.display.flip()
-    
-pygame.quit() # teardown
+
+# Quit Pygame
+pygame.quit() 
