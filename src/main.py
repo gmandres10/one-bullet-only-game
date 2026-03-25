@@ -63,12 +63,12 @@ class Player(pygame.sprite.Sprite):
             self.rect.x += self.speed * delta 
         
         
-    def update(self):
+    #def update(self):
         # Move player horizontally
-        self.rect.x += self.velocity_x
+     #   self.rect.x += self.velocity_x
         # Wrap around screen
-        if self.rect.left > SCREEN_WIDTH:
-            self.rect.right = 0
+      #  if self.rect.left > SCREEN_WIDTH:
+       #     self.rect.right = 0
 
 # Create player instance
 player = Player()
