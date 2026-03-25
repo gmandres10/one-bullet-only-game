@@ -25,4 +25,8 @@ while running:
         if event.type == pygame.QUIT:
             running = False
     # Drawing
-    pygame.draw.circle(screen, (0, 255, 0), player_pos, 15)
+    pygame.draw.circle(screen, (0, 255, 0), (400,300,100,200))
+    # Update display
+    pygame.display.flip()
+    
+pygame.quit() # teardown
