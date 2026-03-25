@@ -15,3 +15,14 @@ pygame.init()
 
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 pygame.display.set_caption(GAME_TITLE)
+
+
+# Game loop
+running = True
+while running:
+    # Event handling 
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+    # Drawing
+    pygame.draw.rect(screen)
