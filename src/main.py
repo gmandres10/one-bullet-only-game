@@ -25,7 +25,7 @@ FONT_INFO = pygame.font.SysFont("Arial", 24)
 
 # Draw text
 def draw_text(txt, color, position=(10,10)):
-    text_surface = FONT_INFO.render()
+    text_surface = FONT_INFO.render(txt)
 
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 pygame.display.set_caption(GAME_TITLE)
