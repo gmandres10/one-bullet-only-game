@@ -56,6 +56,9 @@ class Player(pygame.sprite.Sprite):
         if self.rect.left > SCREEN_WIDTH:
             self.rect.right = 0
 
+# Create player instance
+player = Player()
+
 # Game loop
 running = True
 while running:
