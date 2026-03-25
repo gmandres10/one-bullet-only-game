@@ -71,7 +71,9 @@ class Player(pygame.sprite.Sprite):
        #     self.rect.right = 0
 
 # Create player instance
+all_sprites = pygame.sprite.Group()
 player = Player()
+all_sprites.add(player)
 
 # Game loop
 running = True
