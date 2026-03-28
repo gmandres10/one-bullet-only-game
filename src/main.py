@@ -141,7 +141,8 @@ class Game:
             self.playing = False       
     
     def _draw(self):
-        
+        self.screen.fill(WHITE)
+        self.
 
 # Create player instance
 all_sprites = pygame.sprite.Group()
