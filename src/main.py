@@ -49,6 +49,9 @@ def draw_text(screen, txt, color, position=(10,10), center=False):
         screen.blit(text_surface, text_rect)
     else:
         screen.blit(text_surface, position)
+        
+def _update(self, delta):
+    if 
 
 class Player(pygame.sprite.Sprite):
     def __init__(self):
