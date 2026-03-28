@@ -31,7 +31,7 @@ FLOOR_Y = SCREEN_HEIGHT - 50
 PLAYER_SPEED = 300
 PLAYER_JUMP_POWER = -600
 PLAYER_GRAVITY = 1400
-
+ENEMY_SPEED = 200
 
 # Set up the display
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
@@ -90,7 +90,14 @@ class Enemies(pygame.sprite.Sprite):
         super().__init__()
         self.image = pygame.Surface((50, 50))
         self.image.fill(RED)
-        self.rect = self.image.
+        self.rect = self.image.get_rect()
+        self.rect.topleft = (SCREEN_WIDTH - 100, FLOOR_Y - 50)
+        self.velocity_x = -ENEMY_SPEED
+        
+    def update(self, delta):
+        self.rect.x += self.velocity_x * delta
+        if self.rect.left < 0 or self.rect.right > SCREEN_WIDTH:
+            self.velocity_x *= -1
         
 # Create player instance
 all_sprites = pygame.sprite.Group()
