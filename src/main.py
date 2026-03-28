@@ -66,7 +66,10 @@ class MainPlayer(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
         
-        self.image = pygame.Surface
+        self.image = pygame.Surface((100, 200))
+        self.image.fill(GREEN)
+        self.rect = self.image.get_rect()
+        self.rect
 # Create player instance
 all_sprites = pygame.sprite.Group()
 player = Player()
