@@ -148,7 +148,7 @@ class Game:
         if not self.playing:
             self._draw_text(self.screen, "Game Over! Press R to Restart", RED, (SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2), center=True)
             
-        pygame.
+        pygame.display.flip()
     def run(self):
         while self.running:
             self._handle_events()
@@ -159,7 +159,7 @@ class Game:
             
             
 # Create player instance
-all_sprites = pygame.sprite.Group()
+# all_sprites = pygame.sprite.Group()
 enemies = pygame.sprite.Group()
 player = Player()       
 all_sprites.add(player)
