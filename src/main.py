@@ -102,8 +102,9 @@ class Enemy(pygame.sprite.Sprite):
     def update(self, delta):
         self.rebounded = False
         self.rect.x += self.velocity_x * delta
-        if self.rect.left < 0 or self.rect.right > SCREEN_WIDTH:
+        if self.rect.left <= 0 or self.rect.right >= SCREEN_WIDTH:
             self.velocity_x *= -1
+            self.rebounded = True
         
 # Create player instance
 all_sprites = pygame.sprite.Group()
