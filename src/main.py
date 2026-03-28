@@ -69,7 +69,19 @@ class MainPlayer(pygame.sprite.Sprite):
         self.image = pygame.Surface((100, 200))
         self.image.fill(GREEN)
         self.rect = self.image.get_rect()
-        self.rect
+        self.rect.topleft = (400,100)
+        
+        self.velocity_y = 0
+        
+    def update(self, delta):
+        # gravity
+        self.velocity_y += PLAYER_GRAVITY * delta
+        self.rect.y += self.velocity_y * delta
+        
+        # floor collision
+        if self.rect.bottom >= FLOOR_Y:
+            self.rect.bottom = FLOOR_Y
+            self.velocity_y = 0
 # Create player instance
 all_sprites = pygame.sprite.Group()
 player = Player()
