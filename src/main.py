@@ -75,7 +75,9 @@ class Player(pygame.sprite.Sprite):
             self.is_jumping = True
         
         # apply gravity
-        self.velocity_y += self.gravity * delta
+        if self.is_jumping:
+            self.velocity_y += self.gravity * delta
+        self.rect.y += self.velocity_y * delta
         
 # Create player instance
 all_sprites = pygame.sprite.Group()
