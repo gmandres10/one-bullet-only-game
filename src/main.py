@@ -126,7 +126,7 @@ while running:
     all_sprites.update(clock.get_time() / 1000.0)  # Pass delta time in seconds
     
     #collision detection
-    collided_enemies = pygame.sprite.spritecollide(player, [enemies], False)
+    collided_enemies = pygame.sprite.spritecollide(player, Enemies, False)
         
     # Drawing
     screen.fill(WHITE)
