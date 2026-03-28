@@ -41,10 +41,14 @@ pygame.display.set_caption(GAME_TITLE)
 FONT_INFO = pygame.font.SysFont("Arial", 24)
 
 # Draw text
-def draw_text(screen,txt, color, position=(10,10)):
+def draw_text(screen, txt, color, position=(10,10), center=False):
     text_surface = FONT_INFO.render(txt, True, color)
     screen.blit(text_surface, position)
     
+    if center:
+        text_rect = text_surface.get_rect(center=position)
+        screen.blit(text_surface, text_rect)
+        
 class Player(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
