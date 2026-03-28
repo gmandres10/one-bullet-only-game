@@ -105,9 +105,11 @@ class Enemy(pygame.sprite.Sprite):
         
 # Create player instance
 all_sprites = pygame.sprite.Group()
-player = Player()       
 enemies = pygame.sprite.Group()
+player = Player()       
+all_sprites.add(player)
 enemy = Enemy()
+all_sprites.add(enemy)
 enemies.add(enemy)
 
 all_sprites.add(player)
@@ -129,7 +131,7 @@ while running:
     all_sprites.update(clock.get_time() / 1000.0)  # Pass delta time in seconds
     
     #collision detection
-    collided_enemies = pygame.sprite.spritecollide(p)
+    collided_enemies = pygame.sprite.spritecollide()
         
     # Drawing
     screen.fill(WHITE)
