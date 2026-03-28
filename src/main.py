@@ -89,7 +89,7 @@ class Player(pygame.sprite.Sprite):
             self.is_jumping = False
             self.velocity_y = 0
         
-class Enemies(pygame.sprite.Sprite):
+class Enemy(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
         self.image = pygame.Surface((50, 50))
@@ -126,7 +126,7 @@ while running:
     all_sprites.update(clock.get_time() / 1000.0)  # Pass delta time in seconds
     
     #collision detection
-    collided_enemies = pygame.sprite.spritecollide(player, Enemies, False)
+    collided_enemies = pygame.sprite.spritecollide(p)
         
     # Drawing
     screen.fill(WHITE)
