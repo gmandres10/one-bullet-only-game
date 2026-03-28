@@ -86,6 +86,7 @@ class MainPlayer(pygame.sprite.Sprite):
 # Create player instance
 all_sprites = pygame.sprite.Group()
 player = Player()
+main_player = MainPlayer()
 all_sprites.add(player)
 
 # Game loop
