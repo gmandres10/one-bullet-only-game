@@ -125,7 +125,7 @@ while running:
     collided_enemies = pygame.sprite.spritecollide(player, [enemies], False)
     
     if collided_enemies:
-        draw_text("You were hit!", RED, (SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2), center=True)
+        draw_text("You were hit!", RED, (SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2))
     
     # Drawing
     screen.fill(WHITE)
