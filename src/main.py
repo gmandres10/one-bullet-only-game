@@ -51,7 +51,12 @@ def draw_text(screen, txt, color, position=(10,10), center=False):
         screen.blit(text_surface, position)
         
 def _update(self, delta):
-    if 
+    if self.playing:
+        self.all_sprites.update(delta)
+        
+    for enemy in self.enemies:
+        if enemy.rebounded:
+            self.score += 1
 
 class Player(pygame.sprite.Sprite):
     def __init__(self):
