@@ -167,35 +167,35 @@ class Game:
 # all_sprites.add(enemy)
 # enemies.add(enemy)
 
-#all_sprites.add(player)
-all_sprites.add(enemies)
+# all_sprites.add(player)
+# all_sprites.add(enemies)
 
 
 # Game loop
-running = True
-while running:
+# running = True
+# while running:
     # Event handling 
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            running = False
+    # for event in pygame.event.get():
+        # if event.type == pygame.QUIT:
+            # running = False
             
     # Clock update 
-    clock.tick(MAX_FPS)
+    # clock.tick(MAX_FPS)
             
     # Update game state
-    all_sprites.update(clock.get_time() / 1000.0)  # Pass delta time in seconds
+    # all_sprites.update(clock.get_time() / 1000.0)  # Pass delta time in seconds
     
     
     
         
     # Drawing
-    screen.fill(WHITE)
-    all_sprites.draw(screen)
+    # screen.fill(WHITE)
+    # all_sprites.draw(screen)
     
     # Draw floor
-    pygame.draw.line(screen, BLACK, (0, FLOOR_Y), (SCREEN_WIDTH, FLOOR_Y), 2)
+    # pygame.draw.line(screen, BLACK, (0, FLOOR_Y), (SCREEN_WIDTH, FLOOR_Y), 2)
     
-    draw_text(screen,"Welcome to Single Shot Arena!", BLUE, (10, 10), center=False)
+    # draw_text(screen,"Welcome to Single Shot Arena!", BLUE, (10, 10), center=False)
     pygame.draw.circle(screen, (RED), (300,300), 20)
     
     # Draw player
