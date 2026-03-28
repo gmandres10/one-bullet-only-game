@@ -131,7 +131,7 @@ while running:
     all_sprites.update(clock.get_time() / 1000.0)  # Pass delta time in seconds
     
     #collision detection
-    collided_enemies = pygame.sprite.spritecollide()
+    collided_enemies = pygame.sprite.spritecollide(player, enemies, False)
         
     # Drawing
     screen.fill(WHITE)
@@ -147,6 +147,7 @@ while running:
     
     if collided_enemies:
         draw_text(screen, "Game Over!", RED, (SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2), center=True)
+        pygame.quit() 
     
     # Update display
     pygame.display.flip()
