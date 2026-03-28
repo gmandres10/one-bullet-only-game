@@ -142,8 +142,22 @@ class Game:
     
     def _draw(self):
         self.screen.fill(WHITE)
-        self.
-
+        self._draw_text(self.screen, f"Score: {self.score}", BLACK, (10, 10))
+        self.all_sprites.draw(self.screen)
+        
+        if not self.playing:
+            self._draw_text(self.screen, "Game Over! Press R to Restart", RED, (SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2), center=True)
+            
+        pygame.
+    def run(self):
+        while self.running:
+            self._handle_events()
+            self.clock.tick(MAX_FPS)
+            self._update(self.clock.get_time() / 1000.0)
+            self._draw()
+        pygame.quit()
+            
+            
 # Create player instance
 all_sprites = pygame.sprite.Group()
 enemies = pygame.sprite.Group()
