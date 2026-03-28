@@ -82,6 +82,7 @@ class MainPlayer(pygame.sprite.Sprite):
         if self.rect.bottom >= FLOOR_Y:
             self.rect.bottom = FLOOR_Y
             self.velocity_y = 0
+
 # Create player instance
 all_sprites = pygame.sprite.Group()
 player = Player()
