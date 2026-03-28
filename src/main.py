@@ -106,6 +106,17 @@ class Enemy(pygame.sprite.Sprite):
             self.velocity_x *= -1
             self.rebounded = True
         
+class Game: 
+    def __init__(self):
+        pygame.init()
+        self.screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+        pygame.display.set_caption(GAME_TITLE)
+        self.clock = pygame.time.Clock()
+        self.running = True
+        self.playing = True
+        self.score = 0
+        
+        
 # Create player instance
 all_sprites = pygame.sprite.Group()
 enemies = pygame.sprite.Group()
