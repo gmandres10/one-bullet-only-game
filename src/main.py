@@ -142,11 +142,11 @@ class Game:
     
     def _draw(self):
         self.screen.fill(WHITE)
-        self._draw_text(self.screen, f"Score: {self.score}", BLACK, (10, 10))
+        self.draw_text(self.screen, f"Score: {self.score}", BLACK, (10, 10))
         self.all_sprites.draw(self.screen)
         
         if not self.playing:
-            self._draw_text(self.screen, "Game Over! Press R to Restart", RED, (SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2), center=True)
+            self.draw_text(self.screen, "Game Over! Press R to Restart", RED, (SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2), center=True)
             
         pygame.display.flip()
     def run(self):
