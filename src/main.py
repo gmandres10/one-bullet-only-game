@@ -57,6 +57,8 @@ def _update(self, delta):
     for enemy in self.enemies:
         if enemy.rebounded:
             self.score += 1
+            
+    collided_enemies = pygame.sprite.spritecollide(player, enemies, False)
 
 class Player(pygame.sprite.Sprite):
     def __init__(self):
@@ -164,8 +166,8 @@ while running:
     # Update game state
     all_sprites.update(clock.get_time() / 1000.0)  # Pass delta time in seconds
     
-    #collision detection
-    collided_enemies = pygame.sprite.spritecollide(player, enemies, False)
+    
+    
         
     # Drawing
     screen.fill(WHITE)
