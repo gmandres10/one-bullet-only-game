@@ -160,14 +160,14 @@ class Game:
             
 # Create player instance
 # all_sprites = pygame.sprite.Group()
-enemies = pygame.sprite.Group()
-player = Player()       
-all_sprites.add(player)
-enemy = Enemy()
-all_sprites.add(enemy)
-enemies.add(enemy)
+# enemies = pygame.sprite.Group()
+# player = Player()       
+# all_sprites.add(player)
+# enemy = Enemy()
+# all_sprites.add(enemy)
+# enemies.add(enemy)
 
-all_sprites.add(player)
+#all_sprites.add(player)
 all_sprites.add(enemies)
 
 
