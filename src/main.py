@@ -53,36 +53,28 @@ class Player(pygame.sprite.Sprite):
         self.image.fill (BLUE)
         self.rect = self.image.get_rect()
         self.rect.topleft = (20, SCREEN_HEIGHT - 250)
+        
         self.speed = PLAYER_SPEED
+        self.velocity_y = 0
+        self.jump_power = PLAYER_JUMP_POWER
+        self.gravity = PLAYER_GRAVITY
+        self.is_jumping = False
         
     def update(self, delta):
         keys = pygame.key.get_pressed()
+        
+        # horizontal movement
         if keys[pygame.K_LEFT] and self.rect.left > 0:
             self.rect.x -= self.speed * delta
         if keys[pygame.K_RIGHT] and self.rect.right < SCREEN_WIDTH:
             self.rect.x += self.speed * delta 
+            
+        # jumping
+        if keys[pygame.K_UP] and not self.is_jumping:
+            self.velocity_y = self.jump_power
+            self.is_jumping = True
         
-class MainPlayer(pygame.sprite.Sprite):
-    def __init__(self):
-        super().__init__()
         
-        self.image = pygame.Surface((100, 200))
-        self.image.fill(GREEN)
-        self.rect = self.image.get_rect()
-        self.rect.topleft = (400,100)
-        
-        self.velocity_y = 0
-        
-    def update(self, delta):
-        # gravity
-        self.velocity_y += PLAYER_GRAVITY * delta
-        self.rect.y += self.velocity_y * delta
-        
-        # floor collision
-        if self.rect.bottom >= FLOOR_Y:
-            self.rect.bottom = FLOOR_Y
-            self.velocity_y = 0
-
 # Create player instance
 all_sprites = pygame.sprite.Group()
 player = Player()
