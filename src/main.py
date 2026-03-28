@@ -40,26 +40,6 @@ FONT_INFO = pygame.font.SysFont("Arial", 24)
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 pygame.display.set_caption(GAME_TITLE)
 
-# Draw text
-def draw_text(screen, txt, color, position=(10,10), center=False):
-    text_surface = FONT_INFO.render(txt, True, color)
-    
-    if center:
-        text_rect = text_surface.get_rect(center=position)
-        screen.blit(text_surface, text_rect)
-    else:
-        screen.blit(text_surface, position)
-        
-def _update(self, delta):
-    if self.playing:
-        self.all_sprites.update(delta)
-        
-    for enemy in self.enemies:
-        if enemy.rebounded:
-            self.score += 1
-    if pygame.sprite.spritecollide(self.player, self.enemies, False):
-        self.playing = False       
-    
 
 class Player(pygame.sprite.Sprite):
     def __init__(self):
@@ -139,7 +119,28 @@ class Game:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 self.running = False
+    
+    # Draw text
+    def draw_text(screen, txt, color, position=(10,10), center=False):
+        text_surface = FONT_INFO.render(txt, True, color)
+    
+        if center:
+            text_rect = text_surface.get_rect(center=position)
+            screen.blit(text_surface, text_rect)
+        else:
+            screen.blit(text_surface, position)
         
+    def _update(self, delta):
+        if self.playing:
+            self.all_sprites.update(delta)
+            
+        for enemy in self.enemies:
+            if enemy.rebounded:
+                self.score += 1
+        if pygame.sprite.spritecollide(self.player, self.enemies, False):
+            self.playing = False       
+    
+
 # Create player instance
 all_sprites = pygame.sprite.Group()
 enemies = pygame.sprite.Group()
