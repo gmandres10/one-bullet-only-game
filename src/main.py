@@ -33,12 +33,12 @@ PLAYER_JUMP_POWER = -600
 PLAYER_GRAVITY = 1400
 ENEMY_SPEED = 200
 
+# Define fonts
+FONT_INFO = pygame.font.SysFont("Arial", 24)
+
 # Set up the display
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 pygame.display.set_caption(GAME_TITLE)
-
-# Define fonts
-FONT_INFO = pygame.font.SysFont("Arial", 24)
 
 # Draw text
 def draw_text(screen, txt, color, position=(10,10), center=False):
@@ -49,6 +49,7 @@ def draw_text(screen, txt, color, position=(10,10), center=False):
         screen.blit(text_surface, text_rect)
     else:
         screen.blit(text_surface, position)
+
 class Player(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
