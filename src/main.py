@@ -29,7 +29,7 @@ GREEN = (0, 255, 0)
 # Game Constants
 FLOOR_Y = SCREEN_HEIGHT - 50
 PLAYER_SPEED = 300
-PLAYER_JUMP_POWER = -400
+PLAYER_JUMP_POWER = -700
 PLAYER_GRAVITY = 1200
 
 
@@ -87,7 +87,7 @@ class Player(pygame.sprite.Sprite):
         
 # Create player instance
 all_sprites = pygame.sprite.Group()
-player = Player()
+player = Player()       
 all_sprites.add(player)
 
 # Game loop
