@@ -85,6 +85,11 @@ class Player(pygame.sprite.Sprite):
             self.is_jumping = False
             self.velocity_y = 0
         
+class Enemies(pygame.sprite.Sprite):
+    def __init__(self):
+        super().__init__()
+        self.image = pygame.Surface((50, 50))
+        
 # Create player instance
 all_sprites = pygame.sprite.Group()
 player = Player()       
