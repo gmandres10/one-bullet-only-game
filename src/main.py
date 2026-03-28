@@ -89,6 +89,8 @@ class Enemies(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
         self.image = pygame.Surface((50, 50))
+        self.image.fill(RED)
+        self.rect = self.image.
         
 # Create player instance
 all_sprites = pygame.sprite.Group()
@@ -118,7 +120,6 @@ while running:
     pygame.draw.line(screen, BLACK, (0, FLOOR_Y), (SCREEN_WIDTH, FLOOR_Y), 2)   
     draw_text("Welcome to Single Shot Arena!", BLUE, (10, 10))
     pygame.draw.circle(screen, (RED), (300,300), 20)
-    pygame.draw.rect(screen, (GREEN), (400, 300, 100, 200))
     
     # Draw player
     screen.blit(player.image, player.rect)
