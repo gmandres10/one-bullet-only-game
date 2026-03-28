@@ -127,10 +127,7 @@ while running:
     
     #collision detection
     collided_enemies = pygame.sprite.spritecollide(player, [enemies], False)
-    
-    if collided_enemies:
-        draw_text(screen, "Game Over!", RED, (SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2), center=True)
-    
+        
     # Drawing
     screen.fill(WHITE)
     all_sprites.draw(screen)
@@ -142,6 +139,9 @@ while running:
     
     # Draw player
     screen.blit(player.image, player.rect)
+    
+    if collided_enemies:
+        draw_text(screen, "Game Over!", RED, (SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2), center=True)
     
     # Update display
     pygame.display.flip()
