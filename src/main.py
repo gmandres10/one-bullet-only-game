@@ -41,7 +41,7 @@ pygame.display.set_caption(GAME_TITLE)
 FONT_INFO = pygame.font.SysFont("Arial", 24)
 
 # Draw text
-def draw_text(txt, color, position=(10,10)):
+def draw_text(screen,txt, color, position=(10,10)):
     text_surface = FONT_INFO.render(txt, True, color)
     screen.blit(text_surface, position)
     
