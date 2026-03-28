@@ -140,6 +140,8 @@ class Game:
         if pygame.sprite.spritecollide(self.player, self.enemies, False):
             self.playing = False       
     
+    def _draw(self):
+        
 
 # Create player instance
 all_sprites = pygame.sprite.Group()
