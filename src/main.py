@@ -57,8 +57,9 @@ def _update(self, delta):
     for enemy in self.enemies:
         if enemy.rebounded:
             self.score += 1
-            
-    collided_enemies = pygame.sprite.spritecollide(player, enemies, False)
+    if pygame.sprite.spritecollide(self.player, self.enemies, False):
+        self.playing = False       
+    
 
 class Player(pygame.sprite.Sprite):
     def __init__(self):
@@ -181,9 +182,7 @@ while running:
     
     # Draw player
     screen.blit(player.image, player.rect)
-    
-    if collided_enemies:
-        draw_text(screen, "Game Over!", RED, (SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2), center=True)
+
     
     # Update display
     pygame.display.flip()
