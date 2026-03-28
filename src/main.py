@@ -106,7 +106,10 @@ class Enemy(pygame.sprite.Sprite):
 # Create player instance
 all_sprites = pygame.sprite.Group()
 player = Player()       
-enemies = Enemies()
+enemies = pygame.sprite.Group()
+enemy = Enemy()
+enemies.add(enemy)
+
 all_sprites.add(player)
 all_sprites.add(enemies)
 
