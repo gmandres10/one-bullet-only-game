@@ -100,6 +100,7 @@ class Enemy(pygame.sprite.Sprite):
         self.velocity_x = -ENEMY_SPEED
         
     def update(self, delta):
+        
         self.rect.x += self.velocity_x * delta
         if self.rect.left < 0 or self.rect.right > SCREEN_WIDTH:
             self.velocity_x *= -1
