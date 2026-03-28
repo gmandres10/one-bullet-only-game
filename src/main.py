@@ -196,14 +196,14 @@ class Game:
     # pygame.draw.line(screen, BLACK, (0, FLOOR_Y), (SCREEN_WIDTH, FLOOR_Y), 2)
     
     # draw_text(screen,"Welcome to Single Shot Arena!", BLUE, (10, 10), center=False)
-    pygame.draw.circle(screen, (RED), (300,300), 20)
+    #pygame.draw.circle(screen, (RED), (300,300), 20)
     
     # Draw player
-    screen.blit(player.image, player.rect)
+    # screen.blit(player.image, player.rect)
 
     
     # Update display
-    pygame.display.flip()
+    # pygame.display.flip()
 
 # Quit Pygame
-pygame.quit() 
+# pygame.quit() 
