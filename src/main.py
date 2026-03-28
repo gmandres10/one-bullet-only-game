@@ -116,6 +116,11 @@ class Game:
         self.playing = True
         self.score = 0
         
+        self.all_sprites = pygame.sprite.Group()
+        self.enemies = pygame.sprite.Group()
+        self.player = Player()
+        self.all_sprites.add(self.player)
+        
         
 # Create player instance
 all_sprites = pygame.sprite.Group()
