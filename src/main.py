@@ -62,7 +62,11 @@ class Player(pygame.sprite.Sprite):
         if keys[pygame.K_RIGHT] and self.rect.right < SCREEN_WIDTH:
             self.rect.x += self.speed * delta 
         
-
+class MainPlayer(pygame.sprite.Sprite):
+    def __init__(self):
+        super().__init__()
+        
+        
 # Create player instance
 all_sprites = pygame.sprite.Group()
 player = Player()
