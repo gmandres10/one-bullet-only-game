@@ -66,7 +66,7 @@ class MainPlayer(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
         
-        
+        self.image = pygame.Surface
 # Create player instance
 all_sprites = pygame.sprite.Group()
 player = Player()
