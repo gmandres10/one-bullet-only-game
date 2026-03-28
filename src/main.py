@@ -138,7 +138,8 @@ while running:
     all_sprites.draw(screen)
     
     # Draw floor
-    pygame.draw.line(screen, BLACK, (0, FLOOR_Y), (SCREEN_WIDTH, FLOOR_Y), 2)   
+    pygame.draw.line(screen, BLACK, (0, FLOOR_Y), (SCREEN_WIDTH, FLOOR_Y), 2)
+    
     draw_text(screen,"Welcome to Single Shot Arena!", BLUE, (10, 10), center=False)
     pygame.draw.circle(screen, (RED), (300,300), 20)
     
@@ -147,7 +148,6 @@ while running:
     
     if collided_enemies:
         draw_text(screen, "Game Over!", RED, (SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2), center=True)
-        pygame.quit() 
     
     # Update display
     pygame.display.flip()
