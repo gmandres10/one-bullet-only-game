@@ -120,7 +120,14 @@ class Game:
         self.enemies = pygame.sprite.Group()
         self.player = Player()
         self.all_sprites.add(self.player)
+        self.enemy = Enemy()
+        self.all_sprites.add(self.enemy)
+        self.enemies.add(self.enemy)
         
+    def _handle_events(self):
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                self.running = False
         
 # Create player instance
 all_sprites = pygame.sprite.Group()
