@@ -122,8 +122,10 @@ while running:
     all_sprites.update(clock.get_time() / 1000.0)  # Pass delta time in seconds
     
     #collision detection
-    if pygame.sprite.collide_rect(player, enemies):
-        print("Player hit by enemy!")
+    collided_enemies = pygame.sprite.spritecollide(player, [enemies], False)
+    
+    if collided_enemies:
+        draw_text("You were hit!", RED, (SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2), center=True)
     
     # Drawing
     screen.fill(WHITE)
