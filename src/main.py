@@ -43,12 +43,12 @@ FONT_INFO = pygame.font.SysFont("Arial", 24)
 # Draw text
 def draw_text(screen, txt, color, position=(10,10), center=False):
     text_surface = FONT_INFO.render(txt, True, color)
-    screen.blit(text_surface, position)
     
     if center:
         text_rect = text_surface.get_rect(center=position)
         screen.blit(text_surface, text_rect)
-        
+    else:
+        screen.blit(text_surface, position)
 class Player(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
@@ -129,7 +129,7 @@ while running:
     collided_enemies = pygame.sprite.spritecollide(player, [enemies], False)
     
     if collided_enemies:
-        draw_text("Game Over!", RED, (SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2))
+        draw_text(screen, "Game Over!", RED, (SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2))
     
     # Drawing
     screen.fill(WHITE)
