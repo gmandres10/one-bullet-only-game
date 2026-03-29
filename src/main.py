@@ -97,6 +97,10 @@ class Enemy(pygame.sprite.Sprite):
             self.velocity_x *= -1
             self.rebounded = True
         
+class Bullet(pygame.sprite.Sprite):
+    def __init__(self):
+        super().__init__()
+        self.image = pygame.Surface(())
 class Game: 
     def __init__(self):
         self.screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
