@@ -155,9 +155,9 @@ class Game:
         self.all_sprites = pygame.sprite.Group()
         self.enemies = pygame.sprite.Group()
         self.player = Player()
-        self.all_sprites.add(self.player)
+        self.bullet = Bullet()
         self.enemy = Enemy()
-        self.all_sprites.add(self.enemy)
+        self.all_sprites.add(self.player, self.enemy, self.bullet)
         self.enemies.add(self.enemy)
 
     def _restart(self):
