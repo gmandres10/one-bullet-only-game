@@ -158,7 +158,7 @@ class Game:
         pygame.draw.line(self.screen, BLACK, (0, FLOOR_Y), (SCREEN_WIDTH, FLOOR_Y), 3)
         
         self.all_sprites.draw(self.screen)
-        self.draw_text(self.screen, f"Score: {self.score}", BLACK, (10, 10))
+        self.draw_text(f"Score: {self.score}", BLACK, (10, 10))
         
         
         if not self.playing:
