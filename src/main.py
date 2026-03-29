@@ -113,7 +113,17 @@ class Game:
         self.enemy = Enemy()
         self.all_sprites.add(self.enemy)
         self.enemies.add(self.enemy)
-        
+
+    def _restart(self):
+        self.playing = True
+        self.score = 0
+        self.all_sprites.empty()
+        self.enemies.empty()
+        self.player = Player()
+        self.enemy = Enemy()
+        self.all_sprites.add(self.player, self.enemy)
+        self.enemies.add(self.enemy)
+            
     def _handle_events(self):
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
