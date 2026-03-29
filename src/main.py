@@ -155,7 +155,7 @@ class Game:
     def _draw(self):
         self.screen.fill(WHITE)
         
-        pygame
+        pygame.draw.line(self.screen, BLACK, (0, FLOOR_Y), )
         
         self.all_sprites.draw(self.screen)
         self.draw_text(self.screen, f"Score: {self.score}", BLACK, (10, 10))
