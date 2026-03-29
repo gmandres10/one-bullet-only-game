@@ -168,7 +168,8 @@ class Game:
         self.enemies.empty()
         self.player = Player()
         self.enemy = Enemy()
-        self.all_sprites.add(self.player, self.enemy)
+        self.bullet = Bullet()
+        self.all_sprites.add(self.player, self.enemy, self.bullet)
         self.enemies.add(self.enemy)
             
     def _handle_events(self):
