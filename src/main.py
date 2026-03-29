@@ -154,8 +154,12 @@ class Game:
     
     def _draw(self):
         self.screen.fill(WHITE)
-        self.draw_text(self.screen, f"Score: {self.score}", BLACK, (10, 10))
+        
+        pygame
+        
         self.all_sprites.draw(self.screen)
+        self.draw_text(self.screen, f"Score: {self.score}", BLACK, (10, 10))
+        
         
         if not self.playing:
             self.draw_text(self.screen, "Game Over! Press R to Restart", RED, (SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2), center=True)
