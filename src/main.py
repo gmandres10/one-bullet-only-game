@@ -133,7 +133,7 @@ class Game:
                     self._restart()
     
     # Draw text
-    def draw_text(screen, txt, color, position=(10,10), center=False):
+    def draw_text(self, txt, color, position=(10,10), center=False):
         text_surface = FONT_INFO.render(txt, True, color)
     
         if center:
