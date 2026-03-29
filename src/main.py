@@ -162,7 +162,7 @@ class Game:
         
         
         if not self.playing:
-            self.draw_text("Game Over! Press R to Restart", RED, (SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2), center=True)
+            self.draw_text(self.draw_text, "Game Over! Press R to Restart", RED, (SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2), center=True)
             
         pygame.display.flip()
     def run(self):
