@@ -136,7 +136,13 @@ class Bullet(pygame.sprite.Sprite):
             self.x = SCREEN_WIDTH - BULLET_RADIUS * 2
             self.velocity_x *= -1
         
-        
+        if self.y <= 0:
+            self.y = 0
+            self.velocity_y *= -1
+            
+        if self.y + BULLET_RADIUS * 2 >= FLOOR_Y:
+            self.y = FLOOR_Y - BULLET_RADIUS * 2
+            self.velocity_y *= -1
 class Game: 
     def __init__(self):
         self.screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
