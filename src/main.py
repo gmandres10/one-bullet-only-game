@@ -119,6 +119,12 @@ class Bullet(pygame.sprite.Sprite):
         self.x = origin_x - BULLET_RADIUS
         self.y = origin_y - BULLET_RADIUS
         self.velocity_x = BULLET_SPEED * direction
+        self.velocity_y = 0
+        self.active = True
+    
+    def update(self, delta):
+        if not self.active:
+            return
         
         
         
