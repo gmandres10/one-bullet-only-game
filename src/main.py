@@ -128,6 +128,9 @@ class Game:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 self.running = False
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_r and not self.playing:
+                    self._restart()
     
     # Draw text
     def draw_text(screen, txt, color, position=(10,10), center=False):
