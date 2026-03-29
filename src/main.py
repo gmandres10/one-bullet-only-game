@@ -10,7 +10,7 @@ def get_asset_path(filename: str) -> str:
 
 # Initialize Pygame
 pygame.init()
-clock = pygame.time.Clock()
+
 # -- Configuration and Constants --
 
 GAME_TITLE = "Single Shot Arena"
