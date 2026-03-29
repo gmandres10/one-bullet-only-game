@@ -88,6 +88,7 @@ class Enemy(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.rect.topleft = (SCREEN_WIDTH - 100, FLOOR_Y - 50)
         self.velocity_x = -ENEMY_SPEED
+        self.rebounded = False
         
     def update(self, delta):
         self.rebounded = False
