@@ -25,6 +25,7 @@ BLACK = (0, 0, 0)
 BLUE = (0, 0, 255)
 RED = (255, 0, 0)
 GREEN = (0, 255, 0)
+YELLOW = (255, 255, 0)
 
 # Game Constants
 FLOOR_Y = SCREEN_HEIGHT - 50
@@ -32,6 +33,9 @@ PLAYER_SPEED = 300
 PLAYER_JUMP_POWER = -600
 PLAYER_GRAVITY = 1400
 ENEMY_SPEED = 200
+BULLET_RADIUS = 10
+BULLET_SPEED = 500
+
 
 # Define fonts
 FONT_INFO = pygame.font.SysFont("Arial", 24)
