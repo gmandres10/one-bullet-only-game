@@ -109,6 +109,16 @@ class Bullet(pygame.sprite.Sprite):
         pygame.draw.circle(self.image, YELLOW, (r, r), r)
         self.rect = self.image.get_rect()
         
+        self.active = False
+        self.x = 0
+        self.y = 0
+        self.velocity_x = 0
+        self.velocity_y = 0
+        
+    def shoot(self, origin_x, origin_y, direction):
+        self.x = origin_x - BULLET_RADIUS
+        self.y = origin_y - BULLET_RADIUS
+        self.velocity_x = BULLET_SPEED * direction
         
         
         
