@@ -71,9 +71,8 @@ class Player(pygame.sprite.Sprite):
             self.is_jumping = True
         
         # apply gravity
-        if self.is_jumping:
-            self.velocity_y += self.gravity * delta
-            self.rect.y += self.velocity_y * delta
+        self.velocity_y += self.gravity * delta
+        self.rect.y += self.velocity_y * delta
         
         # check for landing
         if self.rect.bottom >= FLOOR_Y:
