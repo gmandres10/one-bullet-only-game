@@ -179,6 +179,8 @@ class Game:
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_r and not self.playing:
                     self._restart()
+                if event.key == pygame.K_SPACE and self.playing and not self.bullet.active:
+                    self.bullet.shoot(self.player.rect.centerx, self.player.rect.centery, 1)
     
     # Draw text
     def draw_text(self, txt, color, position=(10,10), center=False):
