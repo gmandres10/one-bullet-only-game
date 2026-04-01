@@ -208,6 +208,7 @@ class Game:
             hit = pygame.sprite.spritecollide(self.bullet, self.enemies, True)
             if hit:
                 self.bullet.active = False
+                
             
         if pygame.sprite.spritecollide(self.player, self.enemies, False):
             self.playing = False       
