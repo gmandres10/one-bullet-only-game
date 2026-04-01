@@ -143,6 +143,9 @@ class Bullet(pygame.sprite.Sprite):
         if self.y + BULLET_RADIUS * 2 >= FLOOR_Y:
             self.y = FLOOR_Y - BULLET_RADIUS * 2
             self.velocity_y *= -1
+        
+        self.rect.x = int(self.x)
+        self.rect.y = int(self.y)
 class Game: 
     def __init__(self):
         self.screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
