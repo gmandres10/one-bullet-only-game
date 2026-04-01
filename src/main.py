@@ -131,14 +131,14 @@ class Bullet(pygame.sprite.Sprite):
         
         if self.x <=0:
             self.x = 0
-            self.velocity_x *= 1
+            self.velocity_x *= -1
         elif self.x + BULLET_RADIUS * 2 >= SCREEN_WIDTH:
             self.x = SCREEN_WIDTH - BULLET_RADIUS * 2
             self.velocity_x *= -1
         
         if self.y <= 0:
             self.y = 0
-            self.velocity_y *= 1
+            self.velocity_y *= -1
             
         if self.y + BULLET_RADIUS * 2 >= FLOOR_Y:
             self.y = FLOOR_Y - BULLET_RADIUS * 2
