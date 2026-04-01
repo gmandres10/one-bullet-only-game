@@ -204,10 +204,10 @@ class Game:
             if enemy.rebounded:
                 self.score += 1
         
-        if self.bullet.active and pygame.sprite.spritecollide(self.bullet, self.enemies, False):        
-            self.enemy = Enemy()
-            
-            self.bullet.active = False
+        if self.bullet.active:
+            hit = pygame.sprite.spritecollide(self.bullet, self.enemies, True)
+            if hit:
+                self.bullet.active = False
             
         if pygame.sprite.spritecollide(self.player, self.enemies, False):
             self.playing = False       
