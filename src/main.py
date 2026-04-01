@@ -105,7 +105,7 @@ class Bullet(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
         r = BULLET_RADIUS
-        self.image = pygame.Surface((r * 2, r * 2))
+        self.image = pygame.Surface((r * 2, r * 2), pygame.SRCALPHA)
         pygame.draw.circle(self.image, YELLOW, (r, r), r)
         self.rect = self.image.get_rect()
         
