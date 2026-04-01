@@ -208,7 +208,8 @@ class Game:
             self.enemy = Enemy()
             self.all_sprites.add(self.enemy)
             self.enemies.add(self.enemy)
-            self.
+            self.bullet.active = False
+            
         if pygame.sprite.spritecollide(self.player, self.enemies, False):
             self.playing = False       
     
