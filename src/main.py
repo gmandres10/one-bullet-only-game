@@ -110,8 +110,8 @@ class Bullet(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         
         self.active = False
-        self.x = 0
-        self.y = 0
+        self.x = -200
+        self.y = -200
         self.velocity_x = 0
         self.velocity_y = 0
         
