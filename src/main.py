@@ -160,6 +160,7 @@ class Game:
         self.all_sprites.add(self.player, self.enemy, self.bullet)
         self.enemies.add(self.enemy)
         
+        
 
     def _restart(self):
         self.playing = True
