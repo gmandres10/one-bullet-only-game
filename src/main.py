@@ -95,8 +95,9 @@ class Enemy(pygame.sprite.Sprite):
         self.rebounded = False
         
     def respawn(self, score):
-        if score < 10:
-            self.rect.topleft = (SCREEN_WIDTH, FLOOR_Y - 50)
+        if score >= 10:
+            self.rect.x = random.randint()
+            
     def update(self, delta):
         self.rebounded = False
         self.rect.x += self.velocity_x * delta
