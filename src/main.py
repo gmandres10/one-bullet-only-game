@@ -222,8 +222,9 @@ class Game:
             hit = pygame.sprite.spritecollide(self.bullet, self.enemies, True)
             if hit:
                 self.bullet.active = False
-                
                 self.score += 5
+                for enemy in hit:
+                    enemy.respawn(self.score)
                 
             
         if pygame.sprite.spritecollide(self.player, self.enemies, False):
