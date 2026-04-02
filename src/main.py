@@ -96,8 +96,18 @@ class Enemy(pygame.sprite.Sprite):
         
     def respawn(self, score):
         if score >= 10:
-            self.rect.x = random.randint()
-            
+            self.rect.x = random.randint(0, SCREEN_WIDTH - self.rect.width)
+            self.rect.y = random.randint(0, FLOOR_Y - self.rect.height)
+        
+        else:
+            side = random.choice(["left", "right"])
+            if side == "left":
+                self.rect.x = 0
+                self.velocity_x = ENEMY_SPEED
+            else:
+                self.rect.x = SCREEN_WIDTH - self.rect.width
+                self.velocity_x = -ENEMY_SPEED
+            self.rect.y = FLOOR_Y - self.rect.height
     def update(self, delta):
         self.rebounded = False
         self.rect.x += self.velocity_x * delta
