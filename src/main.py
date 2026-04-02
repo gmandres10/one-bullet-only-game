@@ -90,7 +90,7 @@ class Enemy(pygame.sprite.Sprite):
         self.image = pygame.Surface((50, 50))
         self.image.fill(RED)
         self.rect = self.image.get_rect()
-        self.rect.topleft = (SCREEN_WIDTH - 100, FLOOR_Y - 50)
+        self.rect.topleft = ( x, y )
         self.velocity_x = -ENEMY_SPEED
         self.rebounded = False
         
