@@ -85,7 +85,7 @@ class Player(pygame.sprite.Sprite):
             self.velocity_y = 0
         
 class Enemy(pygame.sprite.Sprite):
-    def __init__(self):
+    def __init__(self, x, y):
         super().__init__()
         self.image = pygame.Surface((50, 50))
         self.image.fill(RED)
