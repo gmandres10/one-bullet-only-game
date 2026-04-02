@@ -220,7 +220,7 @@ class Game:
                 self.score += 1
         
         if self.bullet.active:
-            hit = pygame.sprite.spritecollide(self.bullet, self.enemies, True)
+            hit = pygame.sprite.spritecollide(self.bullet, self.enemies, False)
             if hit:
                 self.bullet.active = False
                 self.score += 5
