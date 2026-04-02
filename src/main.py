@@ -174,7 +174,7 @@ class Game:
         self.enemies = pygame.sprite.Group()
         self.player = Player()
         self.bullet = Bullet()
-        self.enemy = Enemy(x=SCREEN_WIDTH, y=FLOOR_Y - 50)
+        self.enemy = Enemy(x=SCREEN_WIDTH - 51, y=FLOOR_Y - 50)
         self.all_sprites.add(self.player, self.enemy, self.bullet)
         self.enemies.add(self.enemy)
         
