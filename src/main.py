@@ -49,7 +49,7 @@ class Player(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
         
-        self.image = pygame.Surface((100, 200))
+        self.image = pygame.Surface((50, 100))
         self.image.fill (BLUE)
         self.rect = self.image.get_rect()
         self.rect.topleft = (20, SCREEN_HEIGHT - 250)
