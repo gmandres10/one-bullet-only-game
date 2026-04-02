@@ -1,4 +1,4 @@
-import pygame, os 
+import pygame, os, random
 
 GAME_PATH = os.path.dirname(os.path.abspath(__file__))
 
