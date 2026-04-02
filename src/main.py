@@ -208,8 +208,7 @@ class Game:
             hit = pygame.sprite.spritecollide(self.bullet, self.enemies, True)
             if hit:
                 self.bullet.active = False
-                self.all_sprites.add(self.enemy)
-                self.enemies.add(self.enemy)
+                
                 self.score += 5
                 
             
