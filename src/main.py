@@ -186,7 +186,7 @@ class Game:
         self.all_sprites.empty()
         self.enemies.empty()
         self.player = Player()
-        self.enemy = Enemy()
+        self.enemy = Enemy(x=SCREEN_WIDTH - 51, y=FLOOR_Y - 50)
         self.bullet = Bullet()
         self.all_sprites.add(self.player, self.enemy, self.bullet)
         self.enemies.add(self.enemy)
