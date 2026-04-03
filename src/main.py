@@ -225,10 +225,12 @@ class Game:
         self.score = 0
         self.all_sprites.empty()
         self.enemies.empty()
+        self.platforms.empty()
         self.player = Player()
         self.enemy = Enemy(x=SCREEN_WIDTH - 51, y=FLOOR_Y - 50)
         self.bullet = Bullet()
         self.all_sprites.add(self.player, self.enemy, self.bullet)
+        self._create_platforms()
         self.enemies.add(self.enemy)
             
     def _handle_events(self):
