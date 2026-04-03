@@ -270,6 +270,7 @@ class Game:
                 self.score += 2
                 for enemy in hit:
                     enemy.kill()
+                    enemy.respawn(self.score)
                     
                 if self.score >= 30:
                     self._spawn_enemy(4)
