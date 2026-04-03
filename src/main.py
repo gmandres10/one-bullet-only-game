@@ -278,7 +278,9 @@ class Game:
                 for enemy in hit:
                     enemy.respawn(self.score)
                     
-                if self.score >= 10:
+                if self.score >= 5:
+                    self._spawn_enemy(1)
+                elif self.score >= 10:
                     self._spawn_enemy(2)
                     
         if pygame.sprite.spritecollide(self.player, self.enemies, False):
