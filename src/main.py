@@ -255,7 +255,6 @@ class Game:
         
     def _update(self, delta):
         if self.playing:
-            self.all_sprites.update(delta)
             self.player.update(delta, self.platforms)
             self.enemies.update(delta)
             self.bullet.update(delta)
