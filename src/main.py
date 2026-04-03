@@ -184,7 +184,8 @@ class Game:
             if side == "left":
                 x = 1
                 velocity_x = ENEMY_SPEED
-
+            else:
+                x = SCREEN
     def _restart(self):
         self.playing = True
         self.score = 0
