@@ -196,7 +196,7 @@ class Game:
         self.enemy = Enemy(x=SCREEN_WIDTH - 51, y=FLOOR_Y - 50)
         self._create_platforms()
         self.all_sprites.add(self.player, self.enemy, self.bullet)
-        self.enemies.add(self.enemy)
+        self._spawn_enemy(1)
         
     def _create_platforms(self):
         platform1 = Platform(200, FLOOR_Y - 150, 150, 20)
@@ -231,7 +231,7 @@ class Game:
         self.bullet = Bullet()
         self.all_sprites.add(self.player, self.enemy, self.bullet)
         self._create_platforms()
-        self.enemies.add(self.enemy)
+        self._spawn_enemy(1)
             
     def _handle_events(self):
         for event in pygame.event.get():
