@@ -269,7 +269,7 @@ class Game:
                 self.bullet.active = False
                 self.score += 2
                 for enemy in hit:
-                    enemy.respawn(self.score)
+                    enemy.kill()
                     
                 if self.score >= 30:
                     self._spawn_enemy(4)
