@@ -60,7 +60,7 @@ class Player(pygame.sprite.Sprite):
         self.gravity = PLAYER_GRAVITY
         self.is_jumping = False
         
-    def update(self, delta):
+    def update(self, delta, platforms):
         keys = pygame.key.get_pressed()
         
         # horizontal movement
@@ -194,7 +194,7 @@ class Game:
         self.player = Player()
         self.bullet = Bullet()
         self.enemy = Enemy(x=SCREEN_WIDTH - 51, y=FLOOR_Y - 50)
-        self.platforms()
+        self.platforms.add(Platform(200, 400, 150, 20), Platform(450, 300, 150, 20))
         self.all_sprites.add(self.player, self.enemy, self.bullet)
         self.enemies.add(self.enemy)
         
