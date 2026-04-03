@@ -180,11 +180,10 @@ class Game:
         
     def _spawn_enemy(self, count):
         for i in range(count):
-            x = random.randint(1, SCREEN_WIDTH - 51)
-            y = FLOOR_Y - 50
-            enemy = Enemy(x, y)
-            self.all_sprites.add(enemy)
-            self.enemies.add(enemy)
+            side = random.choice(["left", "right"])
+            if side == "left":
+                x = 1
+                velocity_x = ENEMY_SPEED
 
     def _restart(self):
         self.playing = True
