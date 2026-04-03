@@ -259,8 +259,7 @@ class Game:
         pygame.draw.line(self.screen, BLACK, (0, FLOOR_Y), (SCREEN_WIDTH, FLOOR_Y), 3)
         
         self.all_sprites.draw(self.screen)
-        self.draw_text(f"Score: {self.score}", BLACK, (10, 10))
-        
+        self.draw_text(f"Score: {self.score}", BLACK, (10, 10)) 
         
         if not self.playing:
             self.draw_text("Game Over! Press R to Restart", RED, (SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2), center=True)
