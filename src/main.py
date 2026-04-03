@@ -267,9 +267,8 @@ class Game:
             hit = pygame.sprite.spritecollide(self.bullet, self.enemies, False)
             if hit:
                 self.bullet.active = False
-                self.score += 2
+                self.score += 3
                 for enemy in hit:
-                    enemy.kill()
                     enemy.respawn(self.score)
                     
                 if self.score >= 30:
