@@ -84,6 +84,15 @@ class Player(pygame.sprite.Sprite):
             self.is_jumping = False
             self.velocity_y = 0
         
+        # check for landing on platforms
+        if self.velocity_y > 0:
+            hits = pygame.sprite.spritecollide(self, platforms, False)
+            for platform in hits:
+                if self.rect.bottom <= platform.rect.bottom:
+                    self.rect.bottom = platform.rect.top
+                    self.is_jumping = False
+                    self.velocity_y = 0
+        
 class Enemy(pygame.sprite.Sprite):
     def __init__(self, x, y):
         super().__init__()
