@@ -227,7 +227,6 @@ class Game:
         self.enemies.empty()
         self.platforms.empty()
         self.player = Player()
-        self.enemy = Enemy(x=SCREEN_WIDTH - 51, y=FLOOR_Y - 50)
         self.bullet = Bullet()
         self.all_sprites.add(self.player, self.enemy, self.bullet)
         self._create_platforms()
