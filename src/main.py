@@ -212,7 +212,14 @@ class Game:
             else:
                 x = SCREEN_WIDTH - 51
                 velocity_x = -ENEMY_SPEED
-            y = FLOOR_Y - 50
+            
+            if self.score >= 5:
+                x = random.randint(1, SCREEN_WIDTH - 51)
+                y = random.randint(1, FLOOR_Y - 51)
+                velocity_x = random.choice([-ENEMY_SPEED, ENEMY_SPEED])
+            else:
+                y = FLOOR_Y - 51    
+            
             
             new_enemy = Enemy(x, y)
             new_enemy.velocity_x = velocity_x
