@@ -194,7 +194,7 @@ class Game:
         self.player = Player()
         self.bullet = Bullet()
         self.enemy = Enemy(x=SCREEN_WIDTH - 51, y=FLOOR_Y - 50)
-        self.platforms.add(Platform(200, 400, 150, 20), Platform(450, 300, 150, 20))
+        self.platforms()
         self.all_sprites.add(self.player, self.enemy, self.bullet)
         self.enemies.add(self.enemy)
         
