@@ -185,7 +185,15 @@ class Game:
                 x = 1
                 velocity_x = ENEMY_SPEED
             else:
-                x = SCREEN
+                x = SCREEN_WIDTH - 51
+                velocity_x = -ENEMY_SPEED
+            y = FLOOR_Y - 50
+            
+            new_enemy = Enemy(x, y)
+            new_enemy.velocity_x = velocity_x
+            self.all_sprites.add(new_enemy)
+            self.enemies.add(new_enemy)
+            
     def _restart(self):
         self.playing = True
         self.score = 0
