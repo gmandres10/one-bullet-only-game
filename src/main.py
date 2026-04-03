@@ -194,10 +194,16 @@ class Game:
         self.player = Player()
         self.bullet = Bullet()
         self.enemy = Enemy(x=SCREEN_WIDTH - 51, y=FLOOR_Y - 50)
-        self.platforms()
+        self._create_platforms()
         self.all_sprites.add(self.player, self.enemy, self.bullet)
         self.enemies.add(self.enemy)
         
+    def _create_platforms(self):
+        platform1 = Platform(200, FLOOR_Y - 150, 150, 20)
+        platform2 = Platform(450, FLOOR_Y - 250, 150, 20)
+        self.platforms.add(platform1, platform2)
+        self.all_sprites.add(platform1, platform2)    
+    
     def _spawn_enemy(self, count):
         for i in range(count):
             side = random.choice(["left", "right"])
