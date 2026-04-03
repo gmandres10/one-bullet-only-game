@@ -73,9 +73,7 @@ class Player(pygame.sprite.Sprite):
         if keys[pygame.K_UP] and not self.is_jumping:
             self.velocity_y = self.jump_power
             self.is_jumping = True
-        
-        if keys[pygame.K_DOWN]:
-            self.image = pygame.Surface((50, 50))
+
     
             
         # apply gravity
