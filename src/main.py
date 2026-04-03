@@ -193,9 +193,8 @@ class Game:
         self.platforms = pygame.sprite.Group()
         self.player = Player()
         self.bullet = Bullet()
-        self.enemy = Enemy(x=SCREEN_WIDTH - 51, y=FLOOR_Y - 50)
         self._create_platforms()
-        self.all_sprites.add(self.player, self.enemy, self.bullet)
+        self.all_sprites.add(self.player, self.bullet)
         self._spawn_enemy(1)
         
     def _create_platforms(self):
@@ -228,7 +227,7 @@ class Game:
         self.platforms.empty()
         self.player = Player()
         self.bullet = Bullet()
-        self.all_sprites.add(self.player, self.enemy, self.bullet)
+        self.all_sprites.add(self.player, self.bullet)
         self._create_platforms()
         self._spawn_enemy(1)
             
