@@ -178,7 +178,13 @@ class Game:
         self.all_sprites.add(self.player, self.enemy, self.bullet)
         self.enemies.add(self.enemy)
         
-        
+    def _spawn_enemy(self, count):
+        for i in range(count):
+            x = random.randint(1, SCREEN_WIDTH - 51)
+            y = FLOOR_Y - 50
+            enemy = Enemy(x, y)
+            self.all_sprites.add(enemy)
+            self.enemies.add(enemy)
 
     def _restart(self):
         self.playing = True
