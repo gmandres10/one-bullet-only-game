@@ -190,9 +190,11 @@ class Game:
         
         self.all_sprites = pygame.sprite.Group()
         self.enemies = pygame.sprite.Group()
+        self.platforms = pygame.sprite.Group()
         self.player = Player()
         self.bullet = Bullet()
         self.enemy = Enemy(x=SCREEN_WIDTH - 51, y=FLOOR_Y - 50)
+        self.platforms()
         self.all_sprites.add(self.player, self.enemy, self.bullet)
         self.enemies.add(self.enemy)
         
