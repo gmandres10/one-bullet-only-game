@@ -157,7 +157,8 @@ class Bullet(pygame.sprite.Sprite):
         if not self.active:
             return
         if self.timer_since_shot > 0:
-            self.timer_since_shot 
+            self.timer_since_shot -= delta
+        
         self.x += self.velocity_x * delta
         self.y += self.velocity_y * delta
         
