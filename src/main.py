@@ -287,6 +287,9 @@ class Game:
         
         if self.bullet.active:
             
+            if self.bullet.timer_since_shot <= 0 and pygame.sprite.collide_rect(self.bullet, self.player):
+                self.playing = False
+            
             if pygame.sprite.collide_rect(self.bullet, self.player):
                 self.playing = False
             
