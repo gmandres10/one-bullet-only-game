@@ -221,18 +221,18 @@ class Game:
                 y = random.randint(1, FLOOR_Y - 51)
                 velocity_x = random.choice([-ENEMY_SPEED, ENEMY_SPEED])
             else:
-                y = FLOOR_Y - 51    
+                y = FLOOR_Y - 51   
+    
+            new_enemy = Enemy(x, y)
+            new_enemy.velocity_x = velocity_x
+            self.all_sprites.add(new_enemy)
+            self.enemies.add(new_enemy)
             
     def _bullet_in_catch_zone(self):
         if not self.bullet.active:
             return False
         catch_rect = self.player.rect.inflate(BULLET_CATCH_RANGE, BULLET_CATCH_RANGE)
         return catch_rect.colliderect(self.bullet.rect)
-    
-            new_enemy = Enemy(x, y)
-            new_enemy.velocity_x = velocity_x
-            self.all_sprites.add(new_enemy)
-            self.enemies.add(new_enemy)
             
     def _restart(self):
         self.playing = True
