@@ -151,7 +151,6 @@ class Bullet(pygame.sprite.Sprite):
         self.velocity_y = -300
         self.active = True
         
-
     
     def update(self, delta):
         if not self.active:
