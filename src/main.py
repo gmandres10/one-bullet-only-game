@@ -135,6 +135,8 @@ class Bullet(pygame.sprite.Sprite):
         self.image = pygame.Surface((r * 2, r * 2), pygame.SRCALPHA)
         pygame.draw.circle(self.image, YELLOW, (r, r), r)
         self.rect = self.image.get_rect()
+        self.active = False
+        self.timer_since_shot = 0
         
         self.active = False
         self.x = -200
@@ -148,6 +150,8 @@ class Bullet(pygame.sprite.Sprite):
         self.velocity_x = BULLET_SPEED * direction
         self.velocity_y = -300
         self.active = True
+        self.timer_since_shot = 0.3
+
     
     def update(self, delta):
         if not self.active:
