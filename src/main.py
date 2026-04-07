@@ -282,8 +282,8 @@ class Game:
         if self.bullet.active:
             
             if pygame.sprite.collide_rect(self.bullet, self.player):
-                if self._bullet_in_catch_zone():
-                    self.bullet.active = True
+                if not self._bullet_in_catch_zone():
+                    self.bullet.active = False
             hit = pygame.sprite.spritecollide(self.bullet, self.enemies, True)
             if hit:
                 self.bullet.active = False
