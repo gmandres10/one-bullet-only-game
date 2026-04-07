@@ -257,7 +257,7 @@ class Game:
                     self.bullet.shoot(self.player.rect.centerx, self.player.rect.centery, 1)
                 if event.key == pygame.K_c and self.playing:
                     if self._bullet_in_catch_zone():
-                        
+                        self.bullet.active = False
     
     # Draw text
     def draw_text(self, txt, color, position=(10,10), center=False):
