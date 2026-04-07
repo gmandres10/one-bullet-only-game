@@ -276,7 +276,8 @@ class Game:
                 self.bullet.active = False
                 self.score += 3
             
-                    
+                if self.score < 5:
+                    self._spawn_enemy(1)
                 if self.score >= 5:
                     self._spawn_enemy(1)
                 elif self.score >= 10:
