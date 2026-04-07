@@ -279,7 +279,7 @@ class Game:
                 if self.score < 5:
                     self._spawn_enemy(1)
                 if self.score >= 5:
-                    self._spawn_enemy(1)
+                    self._spawn_enemy(2)
                 elif self.score >= 10:
                     self._spawn_enemy(2)
                     
