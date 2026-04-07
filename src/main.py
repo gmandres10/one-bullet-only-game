@@ -142,7 +142,7 @@ class Bullet(pygame.sprite.Sprite):
         self.velocity_y = 0
         
     def shoot(self, origin_x, origin_y, direction):
-        offset = 80
+        offset = 60
         self.x = origin_x + offset * direction - BULLET_RADIUS
         self.y = origin_y - BULLET_RADIUS
         self.velocity_x = BULLET_SPEED * direction
