@@ -136,7 +136,7 @@ class Bullet(pygame.sprite.Sprite):
         pygame.draw.circle(self.image, YELLOW, (r, r), r)
         self.rect = self.image.get_rect()
         self.active = False
-        self.timer_since_shot = 0
+        
         
         self.active = False
         self.x = -200
@@ -150,14 +150,13 @@ class Bullet(pygame.sprite.Sprite):
         self.velocity_x = BULLET_SPEED * direction
         self.velocity_y = -300
         self.active = True
-        self.timer_since_shot = 0.3
+        
 
     
     def update(self, delta):
         if not self.active:
             return
-        if self.timer_since_shot > 0:
-            self.timer_since_shot -= delta
+        
         
         self.x += self.velocity_x * delta
         self.y += self.velocity_y * delta
@@ -286,9 +285,7 @@ class Game:
                 self.score += 1
         
         if self.bullet.active:
-            
-            if self.bullet.timer_since_shot <= 0 and pygame.sprite.collide_rect(self.bullet, self.player):
-                self.playing = False
+
             
             if pygame.sprite.collide_rect(self.bullet, self.player):
                 self.playing = False
