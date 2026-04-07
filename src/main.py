@@ -308,7 +308,7 @@ class Game:
         self.draw_text(f"Score: {self.score}", BLACK, (10, 10)) 
         
         if self._bullet_in_catch_zone():
-            self.draw_text("CATCH! [C]", GREEN, ())
+            self.draw_text("CATCH! [C]", GREEN, (self.player.rect.centerx, self.player.rect.top - 30), center=True)
         
         if not self.playing:
             self.draw_text("Game Over! Press R to Restart", RED, (SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2), center=True)
