@@ -35,6 +35,7 @@ PLAYER_GRAVITY = 1400
 ENEMY_SPEED = 200
 BULLET_RADIUS = 10
 BULLET_SPEED = 500
+BULLET_CATCH_RANGE = 20
 
 
 # Define fonts
@@ -222,7 +223,12 @@ class Game:
             else:
                 y = FLOOR_Y - 51    
             
-            
+    def _bullet_in_catch_zone(self):
+        if not self.bullet.active:
+            return False
+        catch_rect = self.player.rect.inflate(BULLET_CATCH_RANGE, BULLET_CATCH_RANGE)
+        return catch_rect.colliderect(self.bullet.rect)
+    
             new_enemy = Enemy(x, y)
             new_enemy.velocity_x = velocity_x
             self.all_sprites.add(new_enemy)
