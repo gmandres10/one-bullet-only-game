@@ -368,7 +368,8 @@ class Game:
             g = int(20 + ratio * 70)
             b = int(20 + ratio * 100)
             pygame.draw.line(self.screen, (r,g,b), (0, i), (SCREEN_WIDTH, i))
-            
+        
+        pygame.draw.line(self.screen, (30, 100, 40), (0, FLOOR_Y), (SCREEN_WIDTH, FLOOR_Y), 3)
     def run(self):
         while self.running:
             self._handle_events()
