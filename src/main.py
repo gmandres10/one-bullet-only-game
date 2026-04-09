@@ -306,6 +306,7 @@ class Game:
             self.player.update(delta, self.platforms)
             self.enemies.update(delta)
             self.bullet.update(delta)
+            self._spawn_enemy_timer(delta)
             
         for enemy in self.enemies:
             if enemy.rebounded:
