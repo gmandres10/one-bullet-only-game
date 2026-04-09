@@ -108,8 +108,14 @@ class Player(pygame.sprite.Sprite):
 class Enemy(pygame.sprite.Sprite):
     def __init__(self, x, y):
         super().__init__()
-        self.image = pygame.Surface((50, 50))
-        self.image.fill(RED)
+        img_enemy = pygame.image.load(os.path.join(IMAGES_FOLDER, "enemy.jpg")).convert_alpha()
+        self.image_right = pygame.transform.scale(img_enemy, (50, 50))
+        self.image_left = pygame.transform.flip(self.image_right, True, False)
+        
+        
+        # self.image = pygame.Surface((50, 100))
+        self.image = self.image_right
+
         self.rect = self.image.get_rect()
         self.rect.topleft = ( x, y )
         self.velocity_x = -ENEMY_SPEED
