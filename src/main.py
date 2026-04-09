@@ -213,7 +213,12 @@ class Game:
         self.platforms.add(platform1, platform2)
         self.all_sprites.add(platform1, platform2)    
     
-    
+    def _spawn_enemy_timer(self, delta):
+        current_enemies = len(self.enemies)
+        
+        if self.score >= 20:
+            cap = 6
+        elif 
     
     def _spawn_enemy(self, count):
         for i in range(count):
