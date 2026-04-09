@@ -40,6 +40,9 @@ ENEMY_SPAWN_INTERVAL = 5.0
 MAX_ENEMIES = 6
 
 
+THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
+IMAGES_FOLDER = os.path.join
+
 # Define fonts
 FONT_INFO = pygame.font.SysFont("Arial", 24)
 
