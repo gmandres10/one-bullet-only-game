@@ -231,7 +231,10 @@ class Game:
             return
         
         self.spawn_timer -= delta
-        
+        if self.spawn_timer <= 0:
+            self._spawn_enemy(1)
+            
+            interval = ma
     
     def _spawn_enemy(self, count):
         for i in range(count):
