@@ -226,6 +226,11 @@ class Game:
             cap = 2
             
         cap = min(cap, MAX_ENEMIES)
+        
+        if current_enemies >= cap:
+            return
+        
+        
     
     def _spawn_enemy(self, count):
         for i in range(count):
