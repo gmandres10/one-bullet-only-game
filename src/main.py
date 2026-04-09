@@ -334,7 +334,8 @@ class Game:
                 if abs(r - background_color[0]) < tolerance and \
                 abs(g - background_color[1]) < tolerance and \
                 abs(b - background_color[2]) < tolerance:
-                    image.set_at((x, y), (r, g, b, 0))
+                    image.set_at((x, y), (0, 0, 0, 0))
+        return image
 
     def _update(self, delta):
         if self.playing:
