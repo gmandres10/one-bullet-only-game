@@ -360,6 +360,14 @@ class Game:
             self.draw_text("Game Over! Press R to Restart", RED, (SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2), center=True)
             
         pygame.display.flip()
+    
+    def _draw_background(self):
+        for i in range(SCREEN_HEIGHT):
+            ratio = i / SCREEN_HEIGHT
+            r = int(20 + ratio * 50)
+            g = int(20 + ratio * 70)
+            b = int(20 + ratio * 100)
+            pygame.draw.line(self.screen, (r,g,b))
     def run(self):
         while self.running:
             self._handle_events()
