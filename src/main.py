@@ -54,7 +54,7 @@ pygame.display.set_caption(GAME_TITLE)
 class Player(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
-        img_
+        img_player = pygame.image.load(os.path.join(IMAGES_FOLDER, ""))
         
         
         self.image = pygame.Surface((50, 100))
