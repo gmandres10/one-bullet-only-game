@@ -314,6 +314,17 @@ class Game:
         else:
             screen.blit(text_surface, position)
         
+    def _draw_background(self):
+        for i in range(SCREEN_HEIGHT):
+            ratio = i / SCREEN_HEIGHT
+            r = int(20 + ratio * 50)
+            g = int(20 + ratio * 70)
+            b = int(20 + ratio * 100)
+            pygame.draw.line(self.screen, (r,g,b), (0, i), (SCREEN_WIDTH, i))
+        
+        pygame.draw.rect(self.screen, (30, 100, 40), (0, FLOOR_Y, SCREEN_WIDTH, SCREEN_HEIGHT - FLOOR_Y))
+        pygame.draw.line(self.screen, (20, 60, 20), (0, FLOOR_Y), (SCREEN_WIDTH, FLOOR_Y), 4)
+        
     def _update(self, delta):
         if self.playing:
             self.player.update(delta, self.platforms)
@@ -360,17 +371,6 @@ class Game:
             self.draw_text("Game Over! Press R to Restart", RED, (SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2), center=True)
             
         pygame.display.flip()
-    
-    def _draw_background(self):
-        for i in range(SCREEN_HEIGHT):
-            ratio = i / SCREEN_HEIGHT
-            r = int(20 + ratio * 50)
-            g = int(20 + ratio * 70)
-            b = int(20 + ratio * 100)
-            pygame.draw.line(self.screen, (r,g,b), (0, i), (SCREEN_WIDTH, i))
-        
-        pygame.draw.rect(self.screen, (30, 100, 40), (0, FLOOR_Y, SCREEN_WIDTH, SCREEN_HEIGHT - FLOOR_Y))
-        pygame.draw.line(self.screen, (20, 60, 20), (0, FLOOR_Y), (SCREEN_WIDTH, FLOOR_Y), 4)
         
     def run(self):
         while self.running:
