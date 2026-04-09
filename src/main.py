@@ -362,7 +362,7 @@ class Game:
         pygame.draw.line(self.screen, BLACK, (0, FLOOR_Y), (SCREEN_WIDTH, FLOOR_Y), 3)
         
         self.all_sprites.draw(self.screen)
-        self.draw_text(f"Score: {self.score}", BLACK, (10, 10)) 
+        self.draw_text(f"Score: {self.score}",  WHITE, (10, 10)) 
         
         if self._bullet_in_catch_zone():
             self.draw_text("CATCH! [C]", GREEN, (self.player.rect.centerx, self.player.rect.top - 30), center=True)
