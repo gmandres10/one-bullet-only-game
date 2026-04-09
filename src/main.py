@@ -317,8 +317,8 @@ class Game:
     def _draw_background(self):
         for i in range(SCREEN_HEIGHT):
             ratio = i / SCREEN_HEIGHT
-            r = int(20 + ratio * 50)
-            g = int(20 + ratio * 70)
+            r = int(20 + ratio * 60)
+            g = int(20 + ratio * 80)
             b = int(20 + ratio * 100)
             pygame.draw.line(self.screen, (r,g,b), (0, i), (SCREEN_WIDTH, i))
         
