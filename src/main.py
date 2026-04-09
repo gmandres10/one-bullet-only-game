@@ -234,8 +234,7 @@ class Game:
         if self.spawn_timer <= 0:
             self._spawn_enemy(1)
             
-            interval = ma
-    
+            interval = max(2.0, ENEMY_SPAWN_INTERVAL -self 
     def _spawn_enemy(self, count):
         for i in range(count):
             side = random.choice(["left", "right"])
