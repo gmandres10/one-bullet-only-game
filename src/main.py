@@ -252,6 +252,7 @@ class Game:
         self.all_sprites.add(self.player, self.bullet)
         self._create_platforms()
         self._spawn_enemy(1)
+        self.spawn_timer = ENEMY_SPAWN_INTERVAL
             
     def _handle_events(self):
         for event in pygame.event.get():
