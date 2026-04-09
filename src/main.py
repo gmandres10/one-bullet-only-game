@@ -357,7 +357,7 @@ class Game:
             self.playing = False       
     
     def _draw(self):
-        self.screen.fill(WHITE)
+        self._draw_background()
         
         pygame.draw.line(self.screen, BLACK, (0, FLOOR_Y), (SCREEN_WIDTH, FLOOR_Y), 3)
         
