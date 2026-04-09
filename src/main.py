@@ -230,6 +230,7 @@ class Game:
         if current_enemies >= cap:
             return
         
+        self.spawn_timer -= delta
         
     
     def _spawn_enemy(self, count):
