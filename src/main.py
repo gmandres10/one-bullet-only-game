@@ -54,6 +54,8 @@ pygame.display.set_caption(GAME_TITLE)
 class Player(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
+        img_
+        
         
         self.image = pygame.Surface((50, 100))
         self.image.fill (BLUE)
