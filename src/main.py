@@ -218,7 +218,14 @@ class Game:
         
         if self.score >= 20:
             cap = 6
-        elif 
+        elif self.score >= 10:
+            cap = 4
+        elif self.score >= 5:
+            cap = 3
+        else:
+            cap = 2
+            
+        cap = min(cap, MAX_ENEMIES)
     
     def _spawn_enemy(self, count):
         for i in range(count):
