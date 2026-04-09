@@ -290,12 +290,13 @@ class Game:
                 self.bullet.active = False
                 self.score += 3
             
-                if self.score < 5:
-                    self._spawn_enemy(1)
-                if self.score >= 5:
-                    self._spawn_enemy(2)
-                elif self.score >= 10:
-                    self._spawn_enemy(2)
+            
+                #if self.score < 5:
+                 #   self._spawn_enemy(1)
+                #if self.score >= 5:
+                 #   self._spawn_enemy(2)
+                #elif self.score >= 10:
+                 #   self._spawn_enemy(2)
                     
         if pygame.sprite.spritecollide(self.player, self.enemies, False):
             self.playing = False       
