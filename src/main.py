@@ -59,7 +59,7 @@ class Player(pygame.sprite.Sprite):
         self.image_left = pygame.transform.flip(self.image_right, True, False)
         
         
-        self.image = pygame.Surface((50, 100))
+        # self.image = pygame.Surface((50, 100))
         self.image.fill (BLUE)
         self.rect = self.image.get_rect()
         self.rect.topleft = (400, SCREEN_HEIGHT)
