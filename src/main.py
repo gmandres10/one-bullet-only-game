@@ -194,6 +194,8 @@ class Game:
         self.running = True
         self.playing = True
         self.score = 0
+        self.spawn_timer = ENEMY_SPAWN_INTERVAL
+        
         
         self.all_sprites = pygame.sprite.Group()
         self.enemies = pygame.sprite.Group()
@@ -203,6 +205,7 @@ class Game:
         self._create_platforms()
         self.all_sprites.add(self.player, self.bullet)
         self._spawn_enemy(1)
+        
         
     def _create_platforms(self):
         platform1 = Platform(200, FLOOR_Y - 150, 150, 20)
