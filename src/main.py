@@ -61,6 +61,7 @@ class Player(pygame.sprite.Sprite):
         self.image = self.image_right
         self.rect = self.image.get_rect()
         self.rect.topleft = (400, SCREEN_HEIGHT)
+        self.mask = pygame.mask.from_surface(self.image)
         
         self.speed = PLAYER_SPEED
         self.velocity_y = 0
