@@ -51,16 +51,16 @@ screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 pygame.display.set_caption(GAME_TITLE)
 
 def remove_background_image(image, background_color=(255, 255, 255), tolerance = 30):
-        image = image.convert_alpha()
-        width, height = image.get_size()
-        for x in range(width):
-            for y in range(height):
-                r, g, b, a = image.get_at((x, y))
-                if abs(r - background_color[0]) < tolerance and \
-                abs(g - background_color[1]) < tolerance and \
-                abs(b - background_color[2]) < tolerance:
-                    image.set_at((x, y), (0, 0, 0, 0))
-        return image
+    image = image.convert_alpha()
+    width, height = image.get_size()
+    for x in range(width):
+        for y in range(height):
+            r, g, b, a = image.get_at((x, y))
+            if abs(r - background_color[0]) < tolerance and \
+            abs(g - background_color[1]) < tolerance and \
+            abs(b - background_color[2]) < tolerance:
+                image.set_at((x, y), (0, 0, 0, 0))
+    return image
 
 class Player(pygame.sprite.Sprite):
     def __init__(self):
