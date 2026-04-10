@@ -109,7 +109,6 @@ class Enemy(pygame.sprite.Sprite):
         img_enemy = pygame.image.load(os.path.join(IMAGES_FOLDER, "enemy.png")).convert_alpha()
         self.image_right = pygame.transform.scale(img_enemy, (50, 50))
         self.image_left = pygame.transform.flip(self.image_right, True, False)
-        img_enemy.set_colorkey((255, 255, 255))
         
         # self.image = pygame.Surface((50, 100))
         self.image = self.image_right
