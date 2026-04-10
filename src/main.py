@@ -54,7 +54,7 @@ pygame.display.set_caption(GAME_TITLE)
 class Player(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
-        img_player = pygame.image.load(os.path.join(IMAGES_FOLDER, "player.jpg")).convert_alpha()
+        img_player = pygame.image.load(os.path.join(IMAGES_FOLDER, "player.png")).convert_alpha()
         self.image_right = pygame.transform.scale(img_player, (50, 100))
         self.image_left = pygame.transform.flip(self.image_right, True, False)
         img_player = remove_background_image(img_player)
@@ -108,7 +108,7 @@ class Player(pygame.sprite.Sprite):
 class Enemy(pygame.sprite.Sprite):
     def __init__(self, x, y):
         super().__init__()
-        img_enemy = pygame.image.load(os.path.join(IMAGES_FOLDER, "enemy.jpg")).convert_alpha()
+        img_enemy = pygame.image.load(os.path.join(IMAGES_FOLDER, "enemy.png")).convert_alpha()
         self.image_right = pygame.transform.scale(img_enemy, (50, 50))
         self.image_left = pygame.transform.flip(self.image_right, True, False)
         img_enemy.set_colorkey((255, 255, 255))
