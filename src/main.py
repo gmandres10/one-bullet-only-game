@@ -118,6 +118,7 @@ class Enemy(pygame.sprite.Sprite):
         self.rect.topleft = ( x, y )
         self.velocity_x = -ENEMY_SPEED
         self.rebounded = False
+        self.mask = pygame.mask.from_surface(self.image)
         
     def respawn(self, score):
         if score >= 10:
