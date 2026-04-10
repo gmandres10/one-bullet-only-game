@@ -340,7 +340,7 @@ class Game:
             if pygame.sprite.collide_mask(self.bullet, self.player):
                 self.playing = False
             
-            hit = pygame.sprite.spritecollide(self.bullet, self.enemies, True)
+            hit = pygame.sprite.spritecollide(self.bullet, self.enemies, True, pygame.sprite.collide_mask)
             if hit:
                 self.bullet.active = False
                 self.score += 3
@@ -353,7 +353,7 @@ class Game:
                 #elif self.score >= 10:
                  #   self._spawn_enemy(2)
                     
-        if pygame.sprite.spritecollide(self.player, self.enemies, False):
+        if pygame.sprite.spritecollide(self.player, self.enemies, False, pygame.sprite.collide_mask):
             self.playing = False       
     
     def _draw(self):
