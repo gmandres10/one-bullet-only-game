@@ -337,7 +337,7 @@ class Game:
                 self.score += 1
         
         if self.bullet.active:
-            if pygame.sprite.collide_rect(self.bullet, self.player):
+            if pygame.sprite.collide_mask(self.bullet, self.player):
                 self.playing = False
             
             hit = pygame.sprite.spritecollide(self.bullet, self.enemies, True)
