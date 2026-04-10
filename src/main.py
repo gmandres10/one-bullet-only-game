@@ -60,8 +60,7 @@ def remove_background_image(image, background_color=(255, 255, 255), tolerance =
             abs(g - background_color[1]) < tolerance and \
             abs(b - background_color[2]) < tolerance:
                 image.set_at((x, y), (0, 0, 0, 0))
-    return image
-
+    return image 
 class Player(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
