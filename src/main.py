@@ -325,8 +325,6 @@ class Game:
         pygame.draw.rect(self.screen, (30, 100, 40), (0, FLOOR_Y, SCREEN_WIDTH, SCREEN_HEIGHT - FLOOR_Y))
         pygame.draw.line(self.screen, (20, 60, 20), (0, FLOOR_Y), (SCREEN_WIDTH, FLOOR_Y), 4)
         
-        return image
-
     def _update(self, delta):
         if self.playing:
             self.player.update(delta, self.platforms)
