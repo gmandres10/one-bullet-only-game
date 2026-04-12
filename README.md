@@ -82,7 +82,7 @@ one-bullet-only-game/
 │   ├── assets/         # Assets used during development
 │   │   └── *.*                 # (Optional) Various images
 │   ├── main.py      # The entry point for the game         
-└── dist/                # "Production" version (this is the code that will be graded)
+└── dist/                # "Production" version 
       ├── assets/         # Verified assets for the working game copied from src
       │   └── *.*                 # Stable version of asset files copied from src
       ├── main.py      # The stable version of main.py
