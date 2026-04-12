@@ -80,13 +80,13 @@ one-bullet-only-game/
 ├── demo.mp4      # <30 second gameplay clip
 ├── src/                # Development "Playground" (it’s ok if this code is buggy/messy)
 │   ├── assets/         # Assets used during development
-│   │   └── *.*                 # (Optional) Various images
+│   │   └── *images*                 # Various images folder
+│   ├── assets/         # Assets used during development
 │   ├── main.py      # The entry point for the game         
 └── dist/                # "Production" version 
       ├── assets/         # Verified assets for the working game copied from src
-      │   └── *.*                 # Stable version of asset files copied from src
+      │   └── *images*                 # Stable version of asset files copied from src
       ├── main.py      # The stable version of main.py
-      └── *.py               # Stable version of other .py files copied from src
 ```
 
 | File / Folder | Purpose |
