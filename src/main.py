@@ -75,9 +75,13 @@ class Player(pygame.sprite.Sprite):
         # horizontal movement
         if keys[pygame.K_LEFT] and self.rect.left > 0:
             self.rect.x -= self.speed * delta
+            self.direction = -1
+            self.image = self.image_left 
         if keys[pygame.K_RIGHT] and self.rect.right < SCREEN_WIDTH:
             self.rect.x += self.speed * delta 
-            
+            self.direction = 1
+            self.image = self.image_right
+
         # jumping
         if keys[pygame.K_UP] and not self.is_jumping:
             self.velocity_y = self.jump_power
