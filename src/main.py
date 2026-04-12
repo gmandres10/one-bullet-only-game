@@ -56,8 +56,8 @@ class Player(pygame.sprite.Sprite):
         img_player = pygame.image.load(os.path.join(IMAGES_FOLDER, "player.png")).convert_alpha()
         self.image_right = pygame.transform.scale(img_player, (50, 100))
         self.image_left = pygame.transform.flip(self.image_right, True, False)
+        self.direction = 1 
         
-        # self.image = pygame.Surface((50, 100))
         self.image = self.image_right
         self.rect = self.image.get_rect()
         self.rect.topleft = (400, SCREEN_HEIGHT)
