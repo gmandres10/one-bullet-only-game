@@ -81,13 +81,7 @@ one-bullet-only-game/
 ├── src/                # Development "Playground" (it’s ok if this code is buggy/messy)
 │   ├── assets/         # Assets used during development
 │   │   └── *.*                 # (Optional) Various images
-│   │   └── *.wav           # (Optional) Various sounds
-│   │   └── *.json           # (Optional) JSON files describing sprites and other data
-│   │   └── *.*                 # (Optional) Other optional files allowed
 │   ├── main.py      # The entry point for the game         
-│   ├── sprites.py    # (Optional) Classes for game objects
-│   ├── utils.py         # (Optional) Helper functions
-│   └── *.py               # (Optional) Other optional files allowed
 └── dist/                # "Production" version (this is the code that will be graded)
       ├── assets/         # Verified assets for the working game copied from src
       │   └── *.*                 # Stable version of asset files copied from src
