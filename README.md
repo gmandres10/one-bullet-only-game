@@ -76,12 +76,23 @@ The spawn interval shrinks by 0.2 seconds per score point (minimum 2 seconds).
 
 ```
 one-bullet-only-game/
-├── main.py            # All game source code (single-file project)
-├── README.md          # This file
-└── assets/
-    └── images/
-        ├── player.png # Player character sprite
-        └── enemy.png  # Enemy sprite
+├── README.md   # Game description, controls, and OOP logic
+├── demo.mp4      # <30 second gameplay clip
+├── src/                # Development "Playground" (it’s ok if this code is buggy/messy)
+│   ├── assets/         # Assets used during development
+│   │   └── *.*                 # (Optional) Various images
+│   │   └── *.wav           # (Optional) Various sounds
+│   │   └── *.json           # (Optional) JSON files describing sprites and other data
+│   │   └── *.*                 # (Optional) Other optional files allowed
+│   ├── main.py      # The entry point for the game         
+│   ├── sprites.py    # (Optional) Classes for game objects
+│   ├── utils.py         # (Optional) Helper functions
+│   └── *.py               # (Optional) Other optional files allowed
+└── dist/                # "Production" version (this is the code that will be graded)
+      ├── assets/         # Verified assets for the working game copied from src
+      │   └── *.*                 # Stable version of asset files copied from src
+      ├── main.py      # The stable version of main.py
+      └── *.py               # Stable version of other .py files copied from src
 ```
 
 | File / Folder | Purpose |
