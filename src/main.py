@@ -303,7 +303,7 @@ class Game:
                 if event.key == pygame.K_r and not self.playing:
                     self._restart()
                 if event.key == pygame.K_SPACE and self.playing and not self.bullet.active:
-                    self.bullet.shoot(self.player.rect.centerx, self.player.rect.centery, 1)
+                    self.bullet.shoot(self.player.rect.centerx, self.player.rect.centery, self.player.direction)
                 if event.key == pygame.K_c and self.playing:
                     if self._bullet_in_catch_zone():
                         self.bullet.active = False
