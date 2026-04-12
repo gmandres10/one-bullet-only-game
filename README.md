@@ -81,11 +81,12 @@ one-bullet-only-game/
 ├── src/                # Development "Playground" (it’s ok if this code is buggy/messy)
 │   ├── assets/         # Assets used during development
 │   │   └── *images*                 # Various images folder
-│   ├── assets/         # Assets used during development
+│   │        └── enemy.png, player.png                 # images for enemy and player
 │   ├── main.py      # The entry point for the game         
 └── dist/                # "Production" version 
       ├── assets/         # Verified assets for the working game copied from src
       │   └── *images*                 # Stable version of asset files copied from src
+      │        └── enemy.png, player.png                 # images for enemy and player
       ├── main.py      # The stable version of main.py
 ```
 
