@@ -77,7 +77,7 @@ The spawn interval shrinks by 0.2 seconds per score point (minimum 2 seconds).
 ```
 one-bullet-only-game/
 ├── README.md   # Game description, controls, and OOP logic
-├── demo.mp4      # <30 second gameplay clip
+├── demo.mp4      # <40 second gameplay clip
 ├── src/                # Development "Playground" (it’s ok if this code is buggy/messy)
 │   ├── assets/         # Assets used during development
 │   │   └── *images*                 # Various images folder
