@@ -75,7 +75,7 @@ The spawn interval shrinks by 0.2 seconds per score point (minimum 2 seconds).
 ## File Structure
 
 ```
-Game/
+one/
 ├── main.py            # All game source code (single-file project)
 ├── README.md          # This file
 └── assets/
