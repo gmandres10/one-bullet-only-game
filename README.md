@@ -1,5 +1,3 @@
-# one-bullet-only-game
-
 # Single Shot Arena
 
 > A fast-paced 2D action platformer where you control **one bullet** — fire it, watch it bounce, and catch it before you can shoot again.  Touch an enemy, or get hit by your own bullet, and it's over.
