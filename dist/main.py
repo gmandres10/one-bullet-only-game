@@ -698,11 +698,6 @@ class Game:
             self.bullet.update(delta)
             self._spawn_enemy_timer(delta)
 
-        # Award a point each time an enemy bounces off a wall.
-        for enemy in self.enemies:
-            if enemy.rebounded:
-                self.score += 1
-
         if self.bullet.active:
             # The bullet hitting the player is an instant loss.
             if pygame.sprite.collide_mask(self.bullet, self.player):
